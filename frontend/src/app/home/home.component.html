@@ -1,0 +1,27 @@
+<div class="container bg-light-dark">
+  <div class="spec-container">
+    <h4>Recently added</h4>
+    <div class="recentSongs">
+      <app-song *ngFor="let song of recentSongs" [song]="song"></app-song>
+    </div>
+  </div>
+
+  <div class="spec-container">
+    <h4>genre</h4>
+    <div class="generes">
+      <div *ngFor="let genre of genres" class="genre" routerLink="/genre/{{genre}}">
+        {{ genre }}
+      </div>
+    </div>
+  </div>
+
+  <div class="spec-container">
+    <h4>albums</h4>
+    <div class="albums">
+      <div *ngFor="let album of albumDetails" class="album">
+        <p>title: {{album.title}}</p>
+        <span>Artist: {{album.leadArtist}}</span>
+      </div>
+    </div>
+  </div>
+</div>
